@@ -20,7 +20,6 @@
 
 .album{
     width: 700px;
-    background-color: orange;
 }
 
 .pic img{
@@ -32,7 +31,7 @@
 }
 
 .thumb{
-    height: calc(350px / 5);
+    height: calc(100% / 5);
   
 }
 
@@ -41,7 +40,7 @@ img{
     object-fit:cover; 
 }
 
-h2,p{
+/* h2,p{
     color: white;
     position: absolute;
     left: 20px;
@@ -54,7 +53,7 @@ p{
 h2{
     bottom: 100px;
 }
-
+ */
 
 
 .invisible{
@@ -62,8 +61,7 @@ h2{
 }
 
 .active{
-    display: block;
-    border: 2px solid yellow;
+    border: 3px solid greenyellow;
 
 }
 

@@ -23,11 +23,11 @@
 
                 <!-- img carousel -->
                 <div class="pic">
-                    <img src="img/01.webp" alt="">
+                    <img :src="movies.image[activeElement]" alt="">
                     <!-- title -->
-                    <h2></h2>
+                    <h2>titolo</h2>
                     <!-- text -->
-                    <p></p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam magnam ullam, numquam delectus laudantium iste illo rerum obcaecati soluta nostrum dolorum neque quod accusamus saepe id quas dolor. Iste, eos?</p>
                 </div>
 
 
@@ -39,7 +39,8 @@
 
             <!-- thumbnails -->
             <div class="thumbnails">
-                <img v-for="img in movies.image" :src="img" class="thumb active" alt="">
+                <!-- il for che mi prende l'array delle img in movies e con il se activeElement e uguale all'indice dell'immagine allora la metto in active -->
+                <img v-for="(img, index) in movies.image" :src="img" class="thumb" :class="activeElement === index ? 'active' : '' " alt="">
      
             </div>
         </div>

@@ -10,6 +10,7 @@ var { createApp } = Vue
 createApp({
     data(){
         return{
+           activeElement: 0,
            movies: {
             image: [
                 'img/01.webp',
