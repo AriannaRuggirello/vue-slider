@@ -35,7 +35,25 @@ createApp({
             ]
            }
         }   
-    }  
+    },
+    methods:{
+        // funzione per passare all'imagine successiva verso il basso
+        arrowDown(){
+            this.activeElement++;
+            if(this.activeElement === this.movies.image.length){
+                // per far tornare alla prima imagine
+                this.activeElement = 0;
+            }
+        },
+        // funzione per passare all'imagine successiva verso il basso
+        arrowTop(){
+            this.activeElement--;
+            if(this.activeElement < 0){
+                // devo riportare all'ultimo indice l'immagine
+                this.activeElement = this.movies.image.length -1;
+            }
+        },
+    } 
 }).mount('#app')
 
 
