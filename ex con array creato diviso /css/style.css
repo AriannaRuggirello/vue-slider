@@ -40,22 +40,6 @@ img{
     object-fit:cover; 
 }
 
-/* h2,p{
-    color: white;
-    position: absolute;
-    left: 20px;
-    bottom: 50px;
-}
-p{  
-    bottom: 50px;  
-}
-
-h2{
-    bottom: 100px;
-}
- */
-
-
 .invisible{
     display: none;   
 }
@@ -67,7 +51,7 @@ h2{
 
 .arrow-top,
 .arrow-bottom{
-    color: white;
+    color: black;
     position: absolute;
     left: 50%;
     font-size: 30px;
@@ -77,8 +61,5 @@ h2{
 }
 
 .arrow-top{
-    top: 0%;    
-}
-.arrow-bottom{
-    bottom: 0%;
+    top: -10%;    
 }

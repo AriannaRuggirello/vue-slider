@@ -34,7 +34,7 @@
                 <!-- freccia in basso -->
                 <div class="arrow-bottom" @click="arrowDown">
                     <i class="fa-solid fa-arrow-down"></i>
-                    </div>
+                </div>
             </div>
 
             <!-- thumbnails -->
@@ -43,8 +43,6 @@
                 <img v-for="(img, index) in movies.image" :src="img" class="thumb" :class="activeElement === index ? 'active' : '' " alt="">
                 <h2 class="invisible" v-for="(bigTitle, index) in movies.title" :class="activeElement === index ? 'active' : '' "></h2>
                 <p class="invisible" v-for="(content, index) in movies.text" :class="activeElement === index ? 'active' : '' "></p>
-
-     
             </div>
         </div>
     </div>

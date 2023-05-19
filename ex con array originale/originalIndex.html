@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/originalStyle.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" id ="app">
+        <div class="slider">
+            <!-- slideshow -->
+            <div class="album">
+
+
+                 <!-- freccia in alto -->
+                 <div class="arrow-top" @click="arrowTop">
+                    <i class="fa-solid fa-arrow-up"></i>
+                </div>
+
+
+                <!-- img carousel -->
+                <div class="pic">
+                    <img :src="movies[activeElement].image" alt="">
+                    <!-- title -->
+                    <h2> {{movies[activeElement].title}}</h2>
+                    <!-- text -->
+                    <p> {{movies[activeElement].text}}</p>
+                </div>
+
+
+                <!-- freccia in basso -->
+                <div class="arrow-bottom" @click="arrowDown">
+                    <i class="fa-solid fa-arrow-down"></i>
+                </div>
+            </div>
+
+            <!-- thumbnails -->
+            <div class="thumbnails">
+                <!-- il for che mi prende l'array delle img in movies e con il se activeElement e uguale all'indice dell'immagine allora la metto in active -->
+                <img v-for="(img,index) in movies" :src="movies[index].image" class="thumb" :class="activeElement === index ? 'active' : '' ">
+              
+            </div>
+        </div>
+    </div>
+
+    <!-- vue -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- js -->
+    <script src="js/originalMain.js"></script>
+</body>
+</html>
