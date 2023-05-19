@@ -25,9 +25,9 @@
                 <div class="pic">
                     <img :src="movies.image[activeElement]" alt="">
                     <!-- title -->
-                    <h2>titolo</h2>
+                    <h2> {{movies.title[activeElement]}}</h2>
                     <!-- text -->
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam magnam ullam, numquam delectus laudantium iste illo rerum obcaecati soluta nostrum dolorum neque quod accusamus saepe id quas dolor. Iste, eos?</p>
+                    <p> {{movies.text[activeElement]}}</p>
                 </div>
 
 
@@ -41,6 +41,9 @@
             <div class="thumbnails">
                 <!-- il for che mi prende l'array delle img in movies e con il se activeElement e uguale all'indice dell'immagine allora la metto in active -->
                 <img v-for="(img, index) in movies.image" :src="img" class="thumb" :class="activeElement === index ? 'active' : '' " alt="">
+                <h2 class="invisible" v-for="(bigTitle, index) in movies.title" :class="activeElement === index ? 'active' : '' "></h2>
+                <p class="invisible" v-for="(content, index) in movies.text" :class="activeElement === index ? 'active' : '' "></p>
+
      
             </div>
         </div>
