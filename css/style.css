@@ -27,15 +27,13 @@
     height: 350px;
 }
 
-.thumb{
-    width: 100px;
-    background-color: greenyellow;
+.thumbnails{
+    width: 100px;  
 }
 
-.col{
-    height: calc(350px /5);
-    border: 1px solid black;
-    
+.thumb{
+    height: calc(350px / 5);
+  
 }
 
 img{
@@ -65,6 +63,8 @@ h2{
 
 .active{
     display: block;
+    border: 2px solid yellow;
+
 }
 
 .arrow-top,
