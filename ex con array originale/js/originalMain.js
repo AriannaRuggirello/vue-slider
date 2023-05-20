@@ -39,17 +39,19 @@ createApp({
         // funzione per passare all'imagine successiva verso il basso
         arrowDown(){
             this.activeElement++;
-            if(this.activeElement === this.image){
+
+            if(this.activeElement === this.movies.length){
                 // per far tornare alla prima imagine
                 this.activeElement = 0;
             }
         },
-        // funzione per passare all'imagine successiva verso il basso
+        // funzione per passare all'imagine successiva verso l'alto
         arrowTop(){
             this.activeElement--;
+
             if(this.activeElement < 0){
                 // devo riportare all'ultimo indice l'immagine
-                this.activeElement = this.image -1;
+                this.activeElement = this.movies.length -1;
             }
         },
     } 
